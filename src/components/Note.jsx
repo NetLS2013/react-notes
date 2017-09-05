@@ -5,8 +5,8 @@ const Note = ({color, onDelete, children}) => {
   const style = {backgroundColor: color};
   console.log(children.typeof);
   return (
-    <div className="note" style={style}>
-      <span className="delete-note" onClick={onDelete}> × </span>
+    <div className="Note" style={style}>
+      <span className="Note__delete" onClick={onDelete}> × </span>
       {children}
     </div>
   );

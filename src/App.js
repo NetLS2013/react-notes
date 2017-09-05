@@ -51,8 +51,8 @@ class App extends Component {
   render() {
     const {notes, searchValue} = this.state;
     return (
-      <div className="notes-app">
-        <h2 className="app-header">NotesApp</h2>
+      <div className="NotesApp">
+        <h2 className="NotesApp__header">NotesApp</h2>
         <NoteEditor onNoteAdd={this.handleNoteAdd}/>
         <Search onSearchChange={this.onSearchChange} value={searchValue}/>
         <NotesGrid notes={this._getDisplayedNotes(notes, searchValue)}

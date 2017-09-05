@@ -24,7 +24,11 @@ body {
   align-items: center;
 }
 
-.note {
+/********************************************************************************************************************** 
+                                                 Note 
+**********************************************************************************************************************/
+
+.Note {
   width: 200px;
   height: auto;
   float: left;
@@ -42,11 +46,11 @@ body {
   word-wrap: break-word;
 }
 
-.note:hover {
+.Note:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.delete-note {
+.Note__delete {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -56,34 +60,30 @@ body {
   font-weight: bold;
 }
 
-.delete-note:hover {
+.Note__delete:hover {
   color: rgba(0, 0, 0, 1);
 }
 
-.note:hover .delete-note {
+.Note:hover .Note__delete {
   display: block;
 }
 
-.note-editor {
+/********************************************************************************************************************** 
+                                               NoteEditor 
+**********************************************************************************************************************/
+
+.NoteEditor {
   width: 100%;
   max-width: 600px;
   padding: 16px;
   margin: 16px auto;
   background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
-.textarea {
+.NoteEditor__text-area {
   width: 100%;
   resize: none;
   margin: 5px;
@@ -92,14 +92,16 @@ body {
   font-weight: 300;
 }
 
-.textarea:focus {
+.NoteEditor__text-area:focus {
   outline: 0;
 }
 
-.add-button {
-  -webkit-align-self: flex-end;
-  /*-ms-flex-item-align: end;*/
-  align-self: flex-end;
+.NoteEditor__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NoteEditor__add-button {
   width: 100px;
   background-color: #44c767;
   border-radius: 28px;
@@ -113,34 +115,46 @@ body {
   text-shadow: 0 1px 0 #2f6627;
 }
 
-.add-button:hover {
+.NoteEditor__add-button:hover {
   background-color: #5cbf2a;
 }
 
-.add-button:active {
+.NoteEditor__add-button:active {
   position: relative;
   top: 1px;
 }
 
-.add-button:focus {
+.NoteEditor__add-button:focus {
   outline: 0;
 }
 
-.notes-grid {
+/**********************************************************************************************************************
+                                              NotesGrid
+**********************************************************************************************************************/
+
+.NotesGrid {
   margin: 0 auto;
 }
 
-.notes-app {
+/**********************************************************************************************************************
+                                       NotesApp (App component)
+**********************************************************************************************************************/
+
+.NotesApp {
   max-width: 960px;
   width: 100%;
 }
 
-.app-header {
+.NotesApp__header {
   text-align: center;
   font-weight: 500;
   color: grey;
   text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
 }
+
+/**********************************************************************************************************************
+                                              ColorPicker
+**********************************************************************************************************************/
 
 .ColorPicker {
   display: flex;
@@ -151,6 +165,10 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
+/**********************************************************************************************************************
+                                                Color
+**********************************************************************************************************************/
 
 .Color {
   display: block;
@@ -167,6 +185,10 @@ body {
   border-color: black;
 }
 
+/**********************************************************************************************************************
+                                                Search
+**********************************************************************************************************************/
+
 .Search {
   display: block;
   border: 2px solid #000;
@@ -175,6 +197,7 @@ body {
   height: 30px;
   padding: 5px 15px;
   font-size: 15px;
+  border-radius: 2px;
 }
 
 .Search:focus {

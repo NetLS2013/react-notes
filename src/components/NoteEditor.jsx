@@ -35,16 +35,18 @@ class NoteEditor extends Component {
 
   render() {
     return (
-      <div className="note-editor">
+      <div className="NoteEditor">
                 <textarea
+                  className="NoteEditor__text-area"
                   placeholder="Enter your note here..."
                   rows={5}
-                  className="textarea"
                   value={this.state.text}
                   onChange={this.handleTextChange}
                 />
-        <ColorPicker onColorChange={this.onColorChange}/>
-        <button className="add-button" onClick={this.handleNoteAdd}>Add</button>
+        <div className="NoteEditor__controls">
+          <ColorPicker onColorChange={this.onColorChange}/>
+          <button className="NoteEditor__add-button" onClick={this.handleNoteAdd}>Add</button>
+        </div>
       </div>
     );
   }

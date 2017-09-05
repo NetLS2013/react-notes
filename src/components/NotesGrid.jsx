@@ -7,7 +7,7 @@ class NotesGrid extends Component {
   componentDidMount() {
   const grid = this.refs.grid;
   this.msnry = new Masonry(grid, {
-    itemSelector: '.note',
+    itemSelector: '.Note',
     columnWidth: 200,
     gutter: 10,
     isFitWidth: true
@@ -25,7 +25,7 @@ class NotesGrid extends Component {
   const {onNoteDelete} = this.props;
 
   return (
-    <div className="notes-grid" ref="grid">
+    <div className="NotesGrid" ref="grid">
       {
         this.props.notes.map(function (note) {
           return (
