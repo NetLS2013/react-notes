@@ -10,7 +10,7 @@ class NoteEditor extends Component {
     this.handleNoteAdd = this.handleNoteAdd.bind(this);
     this.state = {
       text: '',
-      color: 'yellow'
+      color: '#FFEB3B'
     }
   }
 
@@ -44,7 +44,7 @@ class NoteEditor extends Component {
                   onChange={this.handleTextChange}
                 />
         <div className="NoteEditor__controls">
-          <ColorPicker onColorChange={this.onColorChange}/>
+          <ColorPicker onColorChange={this.onColorChange} activeColor={this.state.color} />
           <button className="NoteEditor__add-button" onClick={this.handleNoteAdd}>Add</button>
         </div>
       </div>

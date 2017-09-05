@@ -8,10 +8,10 @@ class Color extends Component {
   };
 
   render() {
-    const {color} = this.props;
+    const {color, isActive} = this.props;
     return (
       <div
-        className="Color"
+        className={`Color ${isActive ? 'Color--active' : ''}`}
         color={color}
         style={{backgroundColor: color}}
         onClick={this.handleClick}
