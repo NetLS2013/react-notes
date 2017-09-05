@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const Note = ({color, onDelete, children}) => {
   const style = {backgroundColor: color};
-  console.log(children.typeof);
   return (
     <div className="Note" style={style}>
       <span className="Note__delete" onClick={onDelete}> × </span>
